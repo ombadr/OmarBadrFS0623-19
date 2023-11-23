@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&family=Kalam&display=swap');
+
+body {
+  background-color: gray;
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+#post-it-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 45px;
+  max-width: 1200px;
+  width: 100%;
+}
+
+.post-it {
+  background-color: white; /* Set your desired post-it color */
+  width: calc(20% - 5px); /* 25% width for 4 post-its per row with gap */
+  padding: 20px;
+  box-sizing: border-box;
+  text-align: center;
+  height: 13em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 7px 7px 7px black, inset rgba(0, 0, 0, 0.35) 0px -50px 36px -28px;
+}
+
+h2 {
+  font-weight: bold;
+  font-size: 2.5em;
+  padding: 15px;
+  font-family: 'Kalam', cursive;
+}
+
+p {
+  font-size: 1.7em;
+  font-family: 'Indie Flower', cursive;
+}
+
+.post-it-yellow {
+  background-color: #fafbc9;
+  transform: rotate(-5deg);
+}
+
+.post-it-green {
+  background-color: #cafccb;
+  transform: rotate(5deg);
+}
+
+.post-it-purple {
+  background-color: #c8c8f6;
+  transform: rotate(-10deg);
+}
+
+.post-it:hover {
+  transform: rotate(0deg);
+  transform: scale(1.2);
+  transition-duration: 0.5s;
+  cursor: pointer;
+}

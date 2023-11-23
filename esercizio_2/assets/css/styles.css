@@ -1,0 +1,61 @@
+body {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#main-container {
+  text-align: left;
+  max-width: 800px;
+  padding: 40px;
+  border: 4px solid black;
+  position: relative;
+}
+
+p {
+  font-size: 2em;
+  width: 70%;
+}
+
+.changing-text {
+  color: blue;
+  opacity: 0; /* Nascondi all'inizio */
+  position: absolute;
+  animation: dissolviTesto 6s infinite; /* Fai partire l'animazione per 6 secondi con loop infinto */
+  left: 375px;
+  width: 100%;
+  text-align: left;
+}
+
+.changing-text:nth-child(1) {
+  animation-delay: 0s; /* Animazione prima parola */
+}
+
+.changing-text:nth-child(2) {
+  animation-delay: 2s; /* Animazione seconda parola dopo 2 secondi */
+}
+
+.changing-text:nth-child(3) {
+  animation-delay: 4s; /* Animazione terza parola dopo 3 secondi */
+}
+
+@keyframes dissolviTesto {
+  0%,
+  16.66% {
+    opacity: 0; /* Nascondi */
+    top: -50px; /* Fai partire il testo da -50px */
+  }
+  16.66%,
+  33.33% {
+    opacity: 1; /* Mostra */
+    top: 104px; /* Muovi il testo a 104px di fianco alla parola originalità */
+  }
+  66.66%,
+  100% {
+    opacity: 0; /* Nascondi */
+    top: 250px; /* Fai sparire verso il basso la parola a 250px */
+  }
+}
